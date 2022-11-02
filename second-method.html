@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //
+
+  // Q: How to find the occurance of characters in string ?
+
+  // Step 1. We will have to create an arrow function nd pass a parameter as given string.
+  // Step 2. For storing value and checking for result create an variable nd assign value as blank object.
+  // Step 3. We will have to ittrate a loop on given string for checking every character.
+  // Step 4. Use hasOwnProperty to check the character is present in our blank object or not.
+  // Step 5. If it is not in object so push that character in object and initialise by 1.
+  // Step 6. If it is in object so increase the occurance of character nd last return the object.
+
+  const findCountCharacter = (str) => {
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+      !obj.hasOwnProperty(str[i]) ? (obj[str[i]] = 1) : obj[str[i]]++;
+    }
+    return obj;
+  };
+  console.log("findCountCharacter :", findCountCharacter("aniket"));
+</script>

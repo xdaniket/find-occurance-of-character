@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //
+
+  // Q: How to find the occurance of characters in string ?
+
+  // Step 1. We will have to split the string into an array for using a reduce method bcoz reduce is an array method.
+  // Step 2. Use reduce method and pass two parameter, accumalator like blank object nd currentWord for each character of string.
+  // Step 3. Use hasOwnProperty to check the character is present in our blank object or not.
+  // Step 4. If it is not in object so push that character in object and initialise by 1.
+  // Step 5. If it is in object so increase the occurance of character nd last return the object.
+
+  let str = "aniket";
+  str = str.split("");
+  const newStr = str.reduce((accObj, currentWord) => {
+    !accObj.hasOwnProperty(currentWord)
+      ? (accObj[currentWord] = 1)
+      : accObj[currentWord]++;
+    return accObj;
+  }, {});
+  console.log("newStr :", newStr);
+</script>
